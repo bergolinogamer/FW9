@@ -54,35 +54,35 @@
             width: 100%;
         }
     }
-               
-@keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    }
-}
-        
-       
-        .info {
-            overflow: hidden;
-            position: fixed;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-
-            font-size: 45px;
-            font-family: sans-serif;
-            color: #b8b8b8;
-
-            transform: translate(-50%, -50%);
+  
+    @keyframes turn {
+        0% {
+            transform: rotateY(0deg);
         }
-
-        .j {
-            font-size: 15px;
-            color: #2F3335;
+  
+        6.25%,
+        50% {
+            transform: rotateY(180deg);
         }
+  
+        56.25%,
+        100% {
+            transform: rotateY(360deg);
+        }
+    }
+  
+    @keyframes bounce {
+  
+        0%,
+        100% {
+            top: 10px;
+        }
+  
+        12.5% {
+            top: 30px;
+        }
+    }
+      
     </style>
     <script>
         function allset() {
