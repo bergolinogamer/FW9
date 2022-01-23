@@ -4,20 +4,24 @@
     <title>desbloqueio 9.00</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body 
+        body {
+            background-color: #242629;
+        }
+
         .loader {
             position: absolute;
             left: 50%;
             top: 50%;
-            margin: -75px 0 0 -75px;  
-            padding: 50px; } div {
-  width: 100px;
-  height: 100px;
-  background-color: #0CB1C4;
-  animation-name: spin;
-  animation-duration: 5000ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear; 
+            margin: -75px 0 0 -75px;
+
+            border: 10px solid #1f1e1e;
+            border-radius: 50%;
+            border-top: 10px solid #044595;
+            border-left: 10px solid #044595;
+            width: 120px;
+            height: 120px;
+            animation: spin 1s linear infinite;
+        }
   
 @keyframes spin {
     from {
