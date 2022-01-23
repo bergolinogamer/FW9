@@ -5,34 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
-            background-color: #242629;
-        }
+  padding: 50px; 
+}
+div {
+  width: 100px;
+  height: 100px;
+  background-color: #0CB1C4;
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+  /* transform: rotate(3deg); */
+   /* transform: rotate(0.3rad);/ */
+   /* transform: rotate(3grad); */ 
+   /* transform: rotate(.03turn);  */
+}
 
-        .loader {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            margin: -30px 0 0 -30px;
-
-            border: 10px solid #1f1e1e;
-            border-radius: 50%;
-            border-top:   5px solid #044595;
-            border-left:   5px solid #044595;
-            width: 30px;
-            height: 30px;
-            animation: linear 1s linear infinite;
-        }
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+        
+       
         .info {
             overflow: hidden;
             position: fixed;
