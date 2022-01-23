@@ -4,25 +4,57 @@
     <title>desbloqueio 9.00</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body {
-            background-color: #242629;
-        }
-
-        .loader {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            margin: -75px 0 0 -75px;
-
-            border: 10px solid #1f1e1e;
-            border-radius: 50%;
-            border-top: 10px solid #044595;
-            border-left: 10px solid #044595;
-            width: 120px;
-            height: 120px;
-            animation: spin 1s linear infinite;
+         body {
+        background-color: #262626;
+        font-family: Lato, sans-serif;
+    }
+  
+    .loader {
+        width: 150px;
+        margin: 150px auto 70px;
+        position: relative;
+    }
+  
+    .loader .loading_1 {
+        position: relative;
+        width: 100%;
+        height: 10px;
+        border: 1px solid yellowgreen;
+        border-radius: 10px;
+        animation: turn 4s linear 1.75s infinite;
+    }
+  
+    .loader .loading_1:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0;
+        height: 100%;
+        background-color: yellowgreen;
+        box-shadow: 10px 0px 15px 0px yellowgreen;
+        animation: load 2s linear infinite;
+    }
+  
+    .loader .loading_2 {
+        position: absolute;
+        width: 100%;
+        top: 10px;
+        color: green;
+        font-size: 22px;
+        text-align: center;
+        animation: bounce 2s linear infinite;
+    }
+  
+    @keyframes load {
+        0% {
+            width: 0%;
         }
   
+        87.5% {
+            width: 100%;
+        }
+    }
+               
 @keyframes spin {
     from {
         transform:rotate(0deg);
